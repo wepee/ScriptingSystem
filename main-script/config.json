@@ -1,0 +1,16 @@
+{
+    "source":
+    {
+        "url": "http://127.0.0.1:8888/public_html/dumb.zip",
+        "name": "dumb.zip",
+        "ext": "db",
+        "dateFormat" : "%Y-%m-%d_%Ih%M"
+    },
+    "savFile":
+    {
+
+    },
+    "log": {
+        "filename": "log.txt"
+    }
+}
