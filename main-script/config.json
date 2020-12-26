@@ -1,20 +1,24 @@
 {
-    "source":
-    {
-        "url": "http://127.0.0.1:8888/public_html/dumb.zip",
-        "zipName": "dumb.zip",
-        "name": "dumb.db",
-        "ext": "db",
-        "dateFormat" : "%Y-%m-%d"
-    },
-    "log": {
-        "filename": "log.txt"
-    },
-
-    "dest":
-    {
-        "hostname": "172.20.10.2",
-        "username": "adamsftp",
-        "password": "motdepasse"
-    }
+  "source": {
+    "url": "http://127.0.0.1:8888/public_html/dumb.zip",
+    "zipName": "dumb.zip",
+    "name": "dumb.db",
+    "ext": "db",
+    "dateFormat": "%Y-%m-%d"
+  },
+  "log": {
+    "filename": "log.txt"
+  },
+  "sftp": {
+    "hostname": "172.20.10.3",
+    "username": "adamsftp",
+    "password": "motdepasse"
+  },
+  "mail": {
+    "hostname" : "smtp.tse.fr",
+    "port" : "587",
+    "login" : "admin@tse.fr",
+    "password" : "motdepasse",
+    "to" : "dest@tse.fr"
+  }
 }
