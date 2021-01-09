@@ -52,21 +52,3 @@ def makeTarfile(output_filename, source_dir):
         logging.info("L'archive %s a bien été crée !", output_filename)
     except Exception as e:
         logging.error(e)
-
-
-def mail(objet, to, corps):
-    try:
-        msg = EmailMessage()
-        msg.set_content(corps)
-        msg["Subject"] = objet
-        msg["From"] = "HackNotify@avicenne-agency.com"
-        msg["To"] = to
-
-        context = ssl.create_default_context()
-        with smtplib.SMTP("smtp.ionos.fr", port=587) as smtp:
-            smtp.starttls(context=context)
-            smtp.login('adam.aleb@avicenne-agency.com', "Asefbesef-123")
-            smtp.send_message(msg)
-
-    except Exception as e:
-        logging.error(e)
