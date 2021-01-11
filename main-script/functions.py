@@ -21,6 +21,7 @@ def clean(fileName):
             os.remove(i)
 
 
+
 def checkZip(zipName):
     logging.info("verifiation du zip :" + zipName)
     try:
@@ -28,9 +29,11 @@ def checkZip(zipName):
             if zip.namelist()[0].split(".")[-1] != data["source"]["ext"]:
                 raise NameError("Mauvais type : le fichier zippé ne contient pas de fichier db")
             else:
-                date = (datetime.datetime(*zip.infolist()[0].date_time[0:6]))
+                date = (datetime.datetime(*zip.infolist()[0].date_time).date())
                 logging.info("Le fichier .db a été trouvé")
                 logging.info("Date du fichier : " + str(date))
+                if date != datetime.date.today():
+                    raise NameError("Le fichier téléchargé depuis le serveur n'est pas à jour")
     except Exception as e:
         logging.error(e)
 

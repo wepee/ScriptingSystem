@@ -4,7 +4,7 @@
     "zipName": "dumb.zip",
     "name": "dumb.db",
     "ext": "db",
-    "dateFormat": "%Y-%m-%d"
+    "dateFormat": "%Y%m%d"
   },
   "log": {
     "filename": "log.txt"
@@ -12,13 +12,18 @@
   "sftp": {
     "hostname": "172.20.10.3",
     "username": "adamsftp",
-    "password": "motdepasse"
+    "password": "motdepasse",
+    "period": "30"
   },
   "mail": {
-    "hostname" : "smtp.tse.fr",
-    "port" : "587",
-    "login" : "admin@tse.fr",
-    "password" : "motdepasse",
-    "to" : "dest@tse.fr"
+    "hostname": "smtp.tse.fr",
+    "port": "587",
+    "login": "admin@tse.fr",
+    "password": "motdepasse",
+    "to": "dest@tse.fr"
+  },
+  "mattermost": {
+    "hook": "https://chat.telecomste.fr/hooks/otnp6d3trpf3peo1gdinzq77gh",
+    "dateFormat": "%Y%m%d"
   }
 }
